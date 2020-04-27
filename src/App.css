@@ -48,7 +48,7 @@ li:not(:first-child){
   font-size: 42px
 }
 li:hover{
-  font-size: 48px;
+  font-size: 45px;
   font-weight: bold;
   transition: 1.5 hover ease-in;
 }

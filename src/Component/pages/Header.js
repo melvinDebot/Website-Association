@@ -1,5 +1,6 @@
 import React from 'react';
 import {Expo, TimelineMax} from 'gsap';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +14,10 @@ import Adherer from './Adherer';
 import FaireUnDon from './faireUnDon';
 
 class Header extends React.Component{
+  constructor(props){
+    super(props);
+
+  }
 
   componentDidMount(){
     var tl = new TimelineMax({paused: true});
@@ -51,7 +56,9 @@ class Header extends React.Component{
           <div className="menu">
             <div className="data">
               <ul>
-                <li>LOGO</li>
+                <li>
+                  <img src={this.props.image} alt="logo" />
+                </li>
                 <li>
                   <a href="/homepage">Accueil</a>
                   </li>
