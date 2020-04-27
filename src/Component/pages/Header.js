@@ -43,9 +43,17 @@ class Header extends React.Component{
     button.addEventListener('click', function(){
         tl.reversed(!tl.reversed());
     })
+    button.addEventListener('touchmove', function(){
+      tl.reversed(!tl.reversed());
+  })
   }
 
   render(){
+
+
+
+
+    
     return(
       <>
         <Router>
