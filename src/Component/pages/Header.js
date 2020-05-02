@@ -82,7 +82,6 @@ class Header extends React.Component{
               </ul>
             </div>
           </div>
-          <HomePage />
           <Switch>
             <Route path="/faireundon">
               <FaireUnDon />

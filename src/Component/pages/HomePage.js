@@ -1,5 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Association from './Association';
+import Adherer from './Adherer';
+import FaireUnDon from './faireUnDon';
 
 
 import bg from '../../assets/bg.jpg';
@@ -20,12 +29,15 @@ class HomePage extends React.Component{
   render(){
     return(
       <div>
+        <Router>
         <div className="container">
           <div className="container-text">
             <h5>Commencez maintenant</h5>
             <h1>Pour nous aider à nous développer,
             vous pouvez faire un don</h1>
-            <button>Faire un don <img src={heart} alt="" /></button>
+            <a href="/faireundon">
+              <button>Faire un don <img src={heart} alt="" /></button>
+            </a>
           </div>
           <img src={bg} alt="" className="img-container" />
         </div>
@@ -55,14 +67,19 @@ class HomePage extends React.Component{
               <h3>S'adhérer</h3>
               <p>Vous avez la possibilité de
               vous engager au sein de l'association</p>
-              <span>En savoir plus</span>
+              <a href="/adherer">
+                <span>En savoir plus</span>
+              </a>
             </div>
             <div className="details-card">
               <img src={mainheart} alt="" className="img-details"/>
               <h3>Faire un don</h3>
               <p>Pour nous aider à nous développer,
               vous pouvez faire un don</p>
-              <span>En savoir plus</span>
+              <a href="/faireundon">
+                <span>En savoir plus</span>
+              </a>
+              
             </div>
           </div>
         </div>
@@ -73,11 +90,27 @@ class HomePage extends React.Component{
               <h3>Evenements</h3>
               <p>Vous organisons des évènements divers
               atelier decouverte,sortis a la plage,rendonné en foret,concert,visite des personne agée,tournoie sportif </p>
-              <button>Nos événements</button>
+              <a href="/event">
+                <button>Nos événements</button>
+              </a>
+              
             </div>
             <img src={imgEvent} alt="" className="img-event" />
             </div>
         </div>
+        <Switch>
+          <Route path="/faireundon">
+            <FaireUnDon />
+          </Route>
+          <Route path="/adherer">
+            <Adherer />
+          </Route>
+          <Route path="/event">
+            <Association />
+          </Route>
+        </Switch>
+        </Router>
+        
         <Footer />
 
 
