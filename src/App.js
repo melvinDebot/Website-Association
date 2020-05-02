@@ -37,7 +37,7 @@ export default function App() {
     button.addEventListener('click', function(){
       tl.reversed(!tl.reversed());
     })
-    button.addEventListener('touchmove', function(){
+    button.addEventListener('touchstart', function(){
       tl.reversed(!tl.reversed());
     })
   })
