@@ -5,6 +5,12 @@ body{
 }
 .hidden{
   overflow: hidden;
+  justify-items: flex-end
+}
+.img-header{
+  position: absolute;
+  top:20px;
+  left: 20px
 }
 .toggle-btn{
   position: fixed;
@@ -36,7 +42,7 @@ span.two{
   position: fixed;
   height: 100vh;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #E4E4FC;
   z-index: 2;
   top: -100%
 }
@@ -173,7 +179,7 @@ a:hover{
 
 .details{
   flex-direction: column;
-  height: 70vh;
+  height: 50vh;
   @media(max-width:600px){
     height: 85vh;
   }
@@ -217,7 +223,7 @@ a:hover{
   flex-direction: column;
   height: 70vh;
   @media(max-width:600px){
-    height: 100vh;
+    height: 109vh;
   }
 
   h5{
@@ -281,6 +287,7 @@ a:hover{
   justify-content: space-between;
   @media(max-width:600px){
     height: 100vh;
+    margin-top: 30px;
   }
 
   .containt-bloc{

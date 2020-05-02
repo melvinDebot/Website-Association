@@ -1,27 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
 
-import Association from './Association';
-import Adherer from './Adherer';
-import FaireUnDon from './faireUnDon';
+import Footer from '../Component/Footer';
 
+import bg from '../assets/bg.jpg';
+import logo from '../assets/logo.svg';
+import heart from '../assets/heart.svg';
+import  earbox from '../assets/earbox.svg';
+import infobox from '../assets/infobox.svg';
+import mainbox from '../assets/mainbox.svg';
+import mainheart from '../assets/mainheart.svg';
+import adherer from '../assets/adherer.svg';
+import imgEvent from '../assets/img-evenement.jpg';
 
-import bg from '../../assets/bg.jpg';
-import logo from '../../assets/logo.svg';
-import heart from '../../assets/heart.svg';
-import  earbox from '../../assets/earbox.svg';
-import infobox from '../../assets/infobox.svg';
-import mainbox from '../../assets/mainbox.svg';
-import mainheart from '../../assets/mainheart.svg';
-import adherer from '../../assets/adherer.svg';
-import imgEvent from '../../assets/img-evenement.jpg';
-
-import Footer from '.././pages/Footer';
 
 
 
@@ -29,7 +20,6 @@ class HomePage extends React.Component{
   render(){
     return(
       <div>
-        <Router>
         <div className="container">
           <div className="container-text">
             <h5>Commencez maintenant</h5>
@@ -98,19 +88,6 @@ class HomePage extends React.Component{
             <img src={imgEvent} alt="" className="img-event" />
             </div>
         </div>
-        <Switch>
-          <Route path="/faireundon">
-            <FaireUnDon />
-          </Route>
-          <Route path="/adherer">
-            <Adherer />
-          </Route>
-          <Route path="/event">
-            <Association />
-          </Route>
-        </Switch>
-        </Router>
-        
         <Footer />
 
 

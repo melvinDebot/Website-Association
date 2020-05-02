@@ -1,10 +1,9 @@
 import React from 'react';
 
-class Footer extends React.Component{
-  render(){
-    return(
-      <>
-        <div className="footer">
+const Footer = () => {
+  return(
+    <>
+       <div className="footer">
           <div className="containt-bloc">
           <div className="bloc">
             <h4>Nous contactez</h4>
@@ -38,9 +37,8 @@ class Footer extends React.Component{
             <p>Mention Légales</p>
           </div>
         </div>
-      </>
-    )
-  }
+    </>
+  )
 }
 
 export default Footer;
