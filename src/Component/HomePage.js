@@ -16,13 +16,21 @@ import imgEvent from '../assets/img-evenement.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import FaireUnDon from '../Component/FaireUnDon';
+import Adherer from '../Component/Adherer';
 
 
 
 class HomePage extends React.Component{
   componentWillMount(){
     AOS.init();
-
   }
   render(){
     return(
@@ -30,13 +38,25 @@ class HomePage extends React.Component{
         <div className="container">
           <div className="container-text">
             <h5>Commencez maintenant</h5>
-            <h1>Pour nous aider à nous développer,
+            <h1 data-aos="fade-up" data-aos-duration="3000">Pour nous aider à nous développer,
             vous pouvez faire un don</h1>
             <a href="/faireundon">
               <button>Faire un don <img src={heart} alt="" /></button>
             </a>
           </div>
-          <img src={bg} alt="" className="img-container" />
+          <img src={bg} alt="" className="img-container" 
+            data-aos="zoom-in" 
+            data-aos-duration="3000"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="500"
+          />
+          <div class="aniWrap">
+              <div class="mouse">
+                <div class="scroller">
+                </div>
+              </div>
+              
+            </div>
         </div>
         <div className="container box">
           <h5>Qui sommes nous ?</h5>
@@ -100,7 +120,7 @@ class HomePage extends React.Component{
               <h3 data-aos="fade-up">Evenements</h3>
               <p data-aos="fade-up">Vous organisons des évènements divers
               atelier decouverte,sortis a la plage,rendonné en foret,concert,visite des personne agée,tournoie sportif </p>
-              <a href="/event">
+              <a href="/">
                 <button data-aos="fade-up">Nos événements</button>
               </a>
               
@@ -109,7 +129,14 @@ class HomePage extends React.Component{
             </div>
         </div>
         <Footer />
-
+        <Switch>
+          <Route path="/faireundon">
+            <FaireUnDon />
+          </Route>
+          <Route path="/adherer">
+            <Adherer />
+          </Route>
+        </Switch>
 
       </div>
     )

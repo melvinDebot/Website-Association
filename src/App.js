@@ -39,12 +39,26 @@ export default function App() {
     button.addEventListener('click', function(){
       tl.reversed(!tl.reversed());
     })
+    const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
   })
   return (
     <Router>
       {/* LE BON */}
       <div>
         <img src={logo} alt="tet" className="img-header"/>
+        <div class="cursor"></div>
       <div className="toggle-btn">
           <span className="one"></span>
           <span className="two"></span>
