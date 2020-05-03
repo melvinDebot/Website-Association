@@ -13,10 +13,17 @@ import mainheart from '../assets/mainheart.svg';
 import adherer from '../assets/adherer.svg';
 import imgEvent from '../assets/img-evenement.jpg';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 
 class HomePage extends React.Component{
+  componentWillMount(){
+    AOS.init();
+
+  }
   render(){
     return(
       <div>
@@ -33,17 +40,30 @@ class HomePage extends React.Component{
         </div>
         <div className="container box">
           <h5>Qui sommes nous ?</h5>
-          <h2>Association LSC</h2>
-          <div className="box-card">
-            <div className="card">
+          <h2 data-aos="fade-up">Association LSC</h2>
+          <div className="box-card" >
+            <div 
+              className="card" 
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-mirror="false"
+            >
               <img src={earbox} alt="" className="img-card"/>
               <p>Un soutien psychologique, moral et une écoute particulière</p>
             </div>
-            <div className="card">
+            <div 
+              className="card"
+              data-aos="fade-up"
+              data-aos-delay="90"
+            >
             <img src={infobox} alt="" className="img-card"/>
               <p>Des diffusions d'informations en lien avec la santé et l'hygiène de vie</p>
             </div>
-            <div className="card">
+            <div 
+              className="card"
+              data-aos="fade-up"
+              data-aos-delay="120"
+            >
               <img src={mainbox} alt="" className="img-card"/>
               <p>Propose une aide aux personnes, défavorisées de la ville</p>
             </div>
@@ -51,7 +71,7 @@ class HomePage extends React.Component{
         </div>
         <div className="container details">
           <h5>Comment faire ?</h5>
-          <div className="box-details">
+          <div className="box-details" data-aos="fade-up">
             <div className="details-card">
               <img src={adherer} alt="" className="img-details"/>
               <h3>S'adhérer</h3>
@@ -77,15 +97,15 @@ class HomePage extends React.Component{
           <h5>Nos actions</h5>
           <div className="wrapper-event">
             <div className="box-event">
-              <h3>Evenements</h3>
-              <p>Vous organisons des évènements divers
+              <h3 data-aos="fade-up">Evenements</h3>
+              <p data-aos="fade-up">Vous organisons des évènements divers
               atelier decouverte,sortis a la plage,rendonné en foret,concert,visite des personne agée,tournoie sportif </p>
               <a href="/event">
-                <button>Nos événements</button>
+                <button data-aos="fade-up">Nos événements</button>
               </a>
               
             </div>
-            <img src={imgEvent} alt="" className="img-event" />
+            <img src={imgEvent} alt="" className="img-event" data-aos="zoom-in"/>
             </div>
         </div>
         <Footer />

@@ -31,7 +31,10 @@ const Footer = () => {
           </div>
           
           <div className="bloc-footer">
-            <p>©Melvin Debot</p>
+            <a href="https://www.melvin-debot.com/">
+              <p>©Melvin Debot</p>
+            </a>
+            
             <p>Conditions générale</p>
             <p>Plan du site</p>
             <p>Mention Légales</p>

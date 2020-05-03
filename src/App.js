@@ -7,8 +7,10 @@ import {
 } from "react-router-dom";
 import logo from './assets/logo.svg'
 import {Expo, TimelineMax} from 'gsap';
+
 import HomePage from './Component/HomePage';
 import FaireUnDon from './Component/FaireUnDon';
+import Adherer from './Component/Adherer';
 
 import './App.scss';
 
@@ -60,6 +62,9 @@ export default function App() {
                 <li>
                   <Link to="/faireundon">Faire un don</Link>
                 </li>
+                <li>
+                  <Link to="/adherer">S'adherer</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -72,8 +77,8 @@ export default function App() {
           <Route path="/faireundon">
             <FaireUnDon />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/adherer">
+            <Adherer  />
           </Route>
           <Route path="/">
             <HomePage />
