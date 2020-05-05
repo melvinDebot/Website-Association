@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Banner from './Banner';
 import Footer from '../Component/Footer';
+import copieImg from '../assets/copie.svg';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 const Content = styled.div`
   width:100%;
@@ -11,8 +13,10 @@ const Content = styled.div`
   h2{
     font-size:50px;
     font-weight:bold;
-
   }
+  @media(max-width:550px){
+      height:170vh;
+    }
 `
 
 const BlockText = styled.div`
@@ -25,7 +29,7 @@ const BlockText = styled.div`
 `
 
 const Text = styled.div`
-  width:80%;
+  width:92%;
   height:30%;
   display:flex;
 
@@ -42,8 +46,15 @@ const Text = styled.div`
     margin-right:20px;
   }
 `
+const styleImg = {
+  width:"15px",
+  height:"15px"
+}
 
 const FaireUnDon = () => {
+  const [iban, setIban] = useState('FR7610278061860002103480121 ');
+  const [bic, setBic] = useState('CMCIFR2A ');
+  const [Copy, setCopy] = useState(false);
   return (
     <Content>
       <Banner title="faire un don" />
@@ -62,9 +73,19 @@ const FaireUnDon = () => {
           <span>3</span>
           <div>
             <p>Entrez les informations ci-dessus : </p>
-            <p>Nom du bénéficiaire : Association de la seconde chance </p>
-            <p>IBAN : FR76 3000 3043 9600 0500 4102 414 </p>
-            <p>BIC : SOGEFRPP  </p>
+            <p>Nom du bénéficiaire : La seconde chance</p>
+            <p>IBAN : 
+              <strong >{iban}</strong> 
+              <CopyToClipboard text={iban} onCopy={()=> {setCopy(true)}}>
+                <img className="copy" src={copieImg} alt="" style={styleImg}/>
+              </CopyToClipboard>
+              </p>
+            <p>BIC : 
+              <strong className="bic">{bic}</strong>  
+              <CopyToClipboard text={bic} onCopy={()=> {setCopy(true)}}>
+                <img src={copieImg} alt="" style={styleImg}/>
+              </CopyToClipboard>
+              </p>
           </div>
         </Text>
         <Text>

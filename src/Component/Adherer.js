@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Content = styled.div`
   width:100%;
-  height:140vh;
+  height:240vh;
   background:white;
   padding-top: 6em;
 `
@@ -64,41 +64,7 @@ const Adherer = () => {
       <Content>
       <Banner title="S'adhérer"/>
       <ContentBlock>
-        <Block>
-          <form>
-            <InputBlock>
-              <p>Nom *</p>
-              <input type="text" placeholder="Jean" required/>
-            </InputBlock>
-            <InputBlock>
-              <p>Prénom *</p>
-              <input type="text" placeholder="Dujardin" required/>
-            </InputBlock>
-            <InputBlock>
-              <p>Numéro de téléphone *</p>
-              <input type="tel" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="0673548261"/>
-            </InputBlock>
-            <InputBlock>
-              <p>Mail *</p>
-              <input type="email" placeholder="xxxxx@gmail.com" required/>
-            </InputBlock>
-            <InputBlock>
-              <p>Adresse </p>
-              <input type="text" placeholder="13 rue lapie" required/>
-            </InputBlock>
-            <InputBlock>
-              <p>Code postale </p>
-              <input type="text" placeholder="35762" required/>
-            </InputBlock>
-            <InputBlock>
-              <p>Ville </p>
-              <input type="text" placeholder="Paris" required/>
-            </InputBlock>
-            <ButtonBlock>
-              <button>Validé</button>
-            </ButtonBlock>
-          </form>
-        </Block>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdmaBynm1WC48-lhw9mOXS3L43FJfi4_Ku4kWSxT2sjLGZHNw/viewform?embedded=true" width="640" height="1249" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
       </ContentBlock>
       <Footer />
     </Content>

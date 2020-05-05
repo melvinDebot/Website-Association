@@ -285,7 +285,7 @@ a:hover{
   flex-direction: column;
   height: 65vh;
   @media(max-width:600px){
-    height: 85vh;
+    height: 95vh;
   }
   h5{
     color: #8CC63F;
@@ -293,7 +293,7 @@ a:hover{
   }
   .box-details{
     width: 85%;
-    height: 70%;
+    height: 75%;
     display: flex;
     justify-content: space-around;
     @media(max-width:600px){

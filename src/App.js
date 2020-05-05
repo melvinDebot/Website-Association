@@ -57,7 +57,9 @@ export default function App() {
     <Router>
       {/* LE BON */}
       <div>
-        <img src={logo} alt="tet" className="img-header"/>
+        <Link to="/">
+          <img src={logo} alt="tet" className="img-header"/>
+        </Link>
         <div class="cursor"></div>
       <div className="toggle-btn">
           <span className="one"></span>
