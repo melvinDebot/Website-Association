@@ -40,9 +40,9 @@ class HomePage extends React.Component{
             <h5>Commencez maintenant</h5>
             <h1 data-aos="fade-up" data-aos-duration="3000">Pour nous aider à nous développer,
             vous pouvez faire un don</h1>
-            <a href="/faireundon">
+            <Link to="/faireundon">
               <button>Faire un don <img src={heart} alt="" /></button>
-            </a>
+            </Link>
           </div>
           <img src={bg} alt="" className="img-container" 
             data-aos="zoom-in" 
