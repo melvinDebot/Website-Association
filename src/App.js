@@ -102,30 +102,3 @@ export default function App() {
     </Router>
   );
 }
-
-const styleOne = {
-  widtt:"100%",
-  height:"100vh",
-  background: "red"
-}
-const styleTwo = {
-  widtt:"100%",
-  height:"200vh",
-  background: "blue"
-}
-
-function Home() {
-  return (
-    <div style={styleOne}></div>
-  );
-}
-
-function About() {
-  return (
-    <div style={styleTwo}></div>
-  );
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}

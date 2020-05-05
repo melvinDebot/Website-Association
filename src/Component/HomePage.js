@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+
 
 import Footer from '../Component/Footer';
 
 import bg from '../assets/bg.jpg';
-import logo from '../assets/logo.svg';
+
 import heart from '../assets/heart.svg';
 import  earbox from '../assets/earbox.svg';
 import infobox from '../assets/infobox.svg';
@@ -17,7 +17,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link
@@ -97,18 +96,18 @@ class HomePage extends React.Component{
               <h3>S'adhérer</h3>
               <p>Vous avez la possibilité de
               vous engager au sein de l'association</p>
-              <a href="/adherer">
+              <Link to="/adherer">
                 <span>En savoir plus</span>
-              </a>
+              </Link>
             </div>
             <div className="details-card">
               <img src={mainheart} alt="" className="img-details"/>
               <h3>Faire un don</h3>
               <p>Pour nous aider à nous développer,
               vous pouvez faire un don</p>
-              <a href="/faireundon">
+              <Link to="/faireundon">
                 <span>En savoir plus</span>
-              </a>
+              </Link>
               
             </div>
           </div>
@@ -120,10 +119,9 @@ class HomePage extends React.Component{
               <h3 data-aos="fade-up">Evenements</h3>
               <p data-aos="fade-up">Vous organisons des évènements divers
               atelier decouverte,sortis a la plage,rendonné en foret,concert,visite des personne agée,tournoie sportif </p>
-              <a href="/">
+              <Link to="/">
                 <button data-aos="fade-up">Nos événements</button>
-              </a>
-              
+              </Link>
             </div>
             <img src={imgEvent} alt="" className="img-event" data-aos="zoom-in"/>
             </div>
